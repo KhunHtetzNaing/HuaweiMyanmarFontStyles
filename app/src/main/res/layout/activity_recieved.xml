@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.htetznaing.hwfontstyles.RecievedActivity">
+
+    <TextView
+        android:id="@+id/nav"
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+
+    <ImageButton
+        android:onClick="reset"
+        android:id="@+id/btnReset"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/resetbg"
+        android:layout_marginTop="25dp"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:layout_marginTop="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_below="@id/nav"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/iv"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/font"
+            android:layout_width="100dp"
+            android:layout_height="100dp" />
+
+    <Button
+        android:onClick="install"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/iv"
+        android:textColor="#fff"
+        android:background="@drawable/ibg"
+        android:id="@+id/btnInstall"
+        android:textAllCaps="false"
+        android:text="Install"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:onClick="change"
+        android:textColor="#fff"
+        android:background="@drawable/cbg"
+        android:textAllCaps="false"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/btnInstall"
+        android:id="@+id/btnChagen"
+        android:text="Change Font"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <com.google.android.gms.ads.AdView
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-2780984156359274/6745602872">
+    </com.google.android.gms.ads.AdView>
+</RelativeLayout>
